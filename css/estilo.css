@@ -32,3 +32,55 @@ font-family: 'Dancing Script';
   margin:30px;
   color:white;
 }
+#imagencentral{
+  background: #82c3a6;
+  width: 100%;
+}
+#espacio{
+  width: 90%;
+  height: 90%;
+
+}
+/*centrado de imagen*/
+#imagencentral img{
+  display:block;
+  margin:auto;
+}
+/*imagenes secundarias*/
+#secundarias{
+  display: flex;
+  flex-direction: row;
+  background: #d5c75f;
+  justify-content:space-around;
+}
+#imagen1>img{
+  border-width: 2px;
+  box-shadow:2px 2px #82c3a6;
+}
+#imagen1>img:hover{
+  transform: rotate(10deg);
+}
+#imagen1,#imagen2>p{
+  font-size: 15px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+#imagen2>img{
+  border-width: 2px;
+  box-shadow:2px 2px #82c3a6;
+}
+
+#imagen2>img:hover{
+  transform: translate(20px,-5px);
+}
+
+footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-family: "Dancing Script", cursive;
+  background: #C6d5c5;
+  border-radius: 10px;
+  margin:0;
+}
