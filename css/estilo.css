@@ -9,6 +9,13 @@ font-family: 'Dancing Script';
   font-family: "Fabiana";
   src: url("../fuentes/Fabiana.ttf");
 }
+body{
+  background: black;
+}
+.contenido{
+  width:900px;
+  margin:auto;
+}
 #cabecera{
     background:  #5b7989;
     font-family: "Dancing Script", cursive;
@@ -21,14 +28,14 @@ font-family: 'Dancing Script';
   text-shadow: 2px #02010a;
   float: left;
   width: 50%;
-  font-size: 60px;
+  font-size: 40px;
   margin:10px;
 
 }
 #menu a{
   float: right;
   text-decoration: none;
-  font-size: 30px;
+  font-size: 20px;
   margin:30px;
   color:white;
 }
@@ -36,26 +43,29 @@ font-family: 'Dancing Script';
   background: #82c3a6;
   width: 100%;
 }
-#espacio{
-  width: 90%;
-  height: 90%;
 
-}
 /*centrado de imagen*/
 #imagencentral img{
   display:block;
   margin:auto;
+  width: 90%;
 }
 /*imagenes secundarias*/
 #secundarias{
   display: flex;
   flex-direction: row;
   background: #d5c75f;
-  justify-content:space-around;
+  justify-content: space-around;
 }
 #imagen1>img{
   border-width: 2px;
   box-shadow:2px 2px #82c3a6;
+  width: 90%;
+}
+#imagen2>img{
+  border-width: 2px;
+  box-shadow:2px 2px #82c3a6;
+  width: 90%;
 }
 #imagen1>img:hover{
   transform: rotate(10deg);
@@ -65,12 +75,6 @@ font-family: 'Dancing Script';
   text-align: center;
   text-decoration: underline;
 }
-
-#imagen2>img{
-  border-width: 2px;
-  box-shadow:2px 2px #82c3a6;
-}
-
 #imagen2>img:hover{
   transform: translate(20px,-5px);
 }
@@ -79,7 +83,7 @@ footer{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  font-family: "Dancing Script", cursive;
+  font-family: "Verdena", cursive;
   background: #C6d5c5;
   border-radius: 10px;
   margin:0;
