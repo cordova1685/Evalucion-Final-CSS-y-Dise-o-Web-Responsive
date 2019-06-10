@@ -9,11 +9,6 @@ font-family: 'Dancing Script';
   font-family: "Fabiana";
   src: url("../fuentes/Fabiana.ttf");
 }
-
-head{
-  animation-duration: 5s;
-  animation-name: slidein,bounce;
-}
 body{
   background: black;
 }
@@ -44,44 +39,35 @@ body{
   margin:30px;
   color:white;
 }
-#imagencentral{
-  background: #82c3a6;
-  width: 100%;
-}
 
-/*centrado de imagen*/
-#imagencentral img{
-  display:block;
-  margin:auto;
-  width: 90%;
-}
-/*imagenes secundarias*/
-#secundarias{
+/*imagenes principales #d5c75f*/
+
+#pincipales>div>img{
+  margin-left: 15px;
+  border-width: 2px;
+  box-shadow:2px 2px #82c3a6;
+  }
+#principales, #secundarias{
   display: flex;
-  flex-direction: row;
+  flex-direction:row;
   background: #d5c75f;
   justify-content: space-around;
 }
-#imagen1>img{
-  border-width: 2px;
-  box-shadow:2px 2px #82c3a6;
-  width: 90%;
+#imagen1,#imagen4{
+  margin-left: 30px;
+  margin-bottom: 20px;
 }
-#imagen2>img{
-  border-width: 2px;
-  box-shadow:2px 2px #82c3a6;
-  width: 90%;
+#imagen1{
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
 }
-#imagen1>img:hover{
-  transform: rotate(10deg);
+#imagen2,#imagen4,#imagen6{
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
 }
-#imagen1,#imagen2>p{
-  font-size: 15px;
-  text-align: center;
-  text-decoration: underline;
-}
-#imagen2>img:hover{
-  transform: translate(20px,-5px);
+#imagen3{
+filter: sepia(90%);
+-webkit-filter: sepia(90%);
 }
 
 footer{
@@ -92,16 +78,4 @@ footer{
   background: #C6d5c5;
   border-radius: 10px;
   margin:0;
-}
-
-@-webkit-keyframes slidein{
-  0%{
-    margin-top: : 150%;
-  }
-  60%{
-    margin-top: : -5%;
-  }
-  100%{
-    margin-top: 0%;
-  }
 }
