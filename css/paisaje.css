@@ -15,6 +15,7 @@ body{
 .contenido{
   width:900px;
   margin:auto;
+  animation: 1s rebote 1;
 }
 #cabecera{
     background:  #5b7989;
@@ -42,21 +43,26 @@ body{
 
 /*imagenes principales #d5c75f*/
 
-#pincipales>div>img{
-  margin-left: 15px;
+.principales>div>img{
   border-width: 2px;
   box-shadow:2px 2px #82c3a6;
+
   }
-#principales, #secundarias{
+.principales, .secundarias{
+  width: 100%;
   display: flex;
   flex-direction:row;
   background: #d5c75f;
-  justify-content: space-around;
+  border-style: none;
+
 }
-#imagen1,#imagen4{
-  margin-left: 30px;
-  margin-bottom: 20px;
-}
+.principales>div{
+  margin: 15px 30px 15px 30px;
+  }
+.secundarias>div{
+  margin: 15px 30px 15px 30px;
+  }
+
 #imagen1{
   filter: blur(10px);
   -webkit-filter: blur(10px);
@@ -78,4 +84,64 @@ footer{
   background: #C6d5c5;
   border-radius: 10px;
   margin:0;
+}
+/*Animacion*/
+@keyframes rebote{
+  0%{
+    -webkit-transform: translatey(2000px);/*Chrome y Safari*/
+    -moz-transform: translatey(2000px);/*Mozilla*/
+    -o-transform: translatey(2000px);/* Ópera*/
+    -ms-transform: translatey(2000px);/*Explorer*/
+  }
+  60%{
+    -webkit-transform: translatey(-50px);
+    -moz-transform: translatey(-50px);
+    -o-transform: translatey(-50px);
+    -ms-transform: translatey(-50px);
+  }
+  100%{
+    -webkit-transform: translatey(0px);
+    -moz-transform: translatey(0px);
+    -o-transform: translatey(0px);
+    -ms-transform: translatey(0px);
+  }
+}
+/*Adaptacion a pantallas mas pequeñas*/
+@media screen and (max-width: 900px) {
+
+  .contenido{
+    width: 100%;
+  }
+ .principales,.secundarias,footer,header{
+  display: flex;
+  flex-direction:column;
+  }
+footer{
+  font-size: 25px;
+}
+#cabecera{
+  display: flex;
+  flex-flow: column;
+  height: auto;
+}
+#titulo{
+  text-align: justify;
+  margin: auto;
+}
+#titulo>h1{
+  width: 100%;
+  text-align:center;
+  margin: auto;
+  font-size: 50px;
+  }
+#menu{
+  text-align: justify;
+  margin: auto;
+}
+#menu a{
+  font-size: 30px;
+}
+#contacto,#condiciones,#social,#copyright{
+  margin : 0 0 10px 30px;
+}
 }

@@ -9,16 +9,14 @@ font-family: 'Dancing Script';
   font-family: "Fabiana";
   src: url("../fuentes/Fabiana.ttf");
 }
-
 body{
-  background-color: black;
+  background: black;
 }
 .contenido{
   width:900px;
   margin:auto;
   animation: 1s rebote 1;
 }
-
 #cabecera{
     background:  #5b7989;
     font-family: "Dancing Script", cursive;
@@ -42,44 +40,40 @@ body{
   margin:30px;
   color:white;
 }
-#imagencentral{
-  background: #82c3a6;
-  width: 100%;
-}
 
-/*centrado de imagen*/
-#imagencentral img{
-  display:block;
-  margin:auto;
-  width: 90%;
-}
-/*imagenes secundarias*/
-#secundarias{
+/*imagenes principales #d5c75f*/
+
+.principales>div>img{
+  border-width: 2px;
+  box-shadow:2px 2px #82c3a6;
+
+  }
+.principales, .secundarias{
+  width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction:row;
   background: #d5c75f;
-  justify-content: space-around;
+  border-style: none;
+
 }
-#imagen1>img{
-  border-width: 2px;
-  box-shadow:2px 2px #82c3a6;
-  width: 90%;
+.principales>div{
+  margin: 15px 30px 15px 30px;
+  }
+.secundarias>div{
+  margin: 15px 30px 15px 30px;
+  }
+
+#imagen1{
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
 }
-#imagen2>img{
-  border-width: 2px;
-  box-shadow:2px 2px #82c3a6;
-  width: 90%;
+#imagen2,#imagen4,#imagen6{
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
 }
-#imagen1>img:hover{
-  transform: rotate(10deg);
-}
-#imagen1,#imagen2>p{
-  font-size: 15px;
-  text-align: center;
-  text-decoration: underline;
-}
-#imagen2>img:hover{
-  transform: translate(20px,-5px);
+#imagen3{
+filter: sepia(90%);
+-webkit-filter: sepia(90%);
 }
 
 footer{
@@ -114,30 +108,24 @@ footer{
 }
 /*Adaptacion a pantallas mas pequeñas*/
 @media screen and (max-width: 900px) {
+
   .contenido{
     width: 100%;
   }
-#secundarias,header, footer{
+ .principales,.secundarias,footer,header{
   display: flex;
   flex-direction:column;
   }
-#imagen2>img{
-  margin:30px;
-}
-.info{
-  font-size: 25px;
-}
+
 #cabecera{
   display: flex;
   flex-flow: column;
   height: auto;
 }
-
 #titulo{
   text-align: justify;
   margin: auto;
 }
-
 #titulo>h1{
   width: 100%;
   text-align:center;
@@ -151,14 +139,10 @@ footer{
 #menu a{
   font-size: 30px;
 }
+footer{
+  font-size: 25px;
+}
 #contacto,#condiciones,#social,#copyright{
   margin : 0 0 10px 30px;
 }
-#imagen1>img:hover{
-  transform: rotate(10deg);
-}
-#imagen2>img:hover{
-  transform: translate(20px,-5px);
-}
-
 }
